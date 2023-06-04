@@ -56,34 +56,41 @@ export default function LifeCounter(props) {
     setNumber(updatedNumber);
   };
 
+  const handleLoss = () => {
+    props.handleLoss(props.player);
+    setLoss(true);
+  };
+
   if (loss == true) {
     return (
-      <div className="score-count-wrapper rounded-xl">
-        <div className="text-5xl text-red-500">Loser</div>
+      <div className="score-count-wrapper">
+        <div className="lose-text">Loser</div>
       </div>
     );
+  }
+  if (props.player.won == true) {
+    return <div>You Won!</div>;
   } else {
     return (
-      <div className="score-count-wrapper rounded-xl">
+      <div className="score-count-wrapper">
         <button
-          className="incrementer-wrapper text-black text-2xl rounded-l-xl"
+          className="incrementer-wrapper"
+          style={{ borderRadius: "15px 0px 0px 15px" }}
           onClick={incrementUp}
         >
           +
         </button>
 
         <div className="score-wrapper  text-black">
-          <div className="life-counter-player-name">{props.playerName}</div>
+          <div className="life-counter-player-name">{props.player.name}</div>
           <div className="score text-5xl">{number}</div>
-          <button
-            className="lost-button rounded-md "
-            onClick={() => setLoss(true)}
-          >
+          <button className="lost-button rounded-md " onClick={handleLoss}>
             I lost
           </button>
         </div>
         <button
           className="incrementer-wrapper text-black text-2xl rounded-r-xl"
+          style={{ borderRadius: "0px 15px 15px 0px" }}
           onClick={incrementDown}
         >
           -

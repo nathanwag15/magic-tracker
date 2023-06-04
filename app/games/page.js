@@ -14,8 +14,8 @@ export default function Home() {
     setDisplay(1);
   };
   return (
-    <div className="flex w-screen justify-center h-screen">
-      <div className="flex w-3/6 justify-center h-screen items-center">
+    <div className="game-component-wrapper">
+      <div className="game-component">
         {display == 0 && (
           <PlayerPicker establishCounterCount={establishCounterCount} />
         )}
