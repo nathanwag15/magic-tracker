@@ -7,13 +7,21 @@ export default function GameComponent(props) {
   const [playersChosen, setPlayersChosen] = useState(0);
   const [players, setPlayers] = useState([]);
   const [currentPlayers, setCurrentPlayers] = useState([
-    { name: "Steve", id: 1, losses: 0 },
-    { name: "Alex", id: 2, losses: 0 },
-    { name: "Kevin", id: 3, losses: 0 },
-    { name: "Alphie", id: 4, losses: 0 },
-    { name: "Becca", id: 5, losses: 0 },
-    { name: "Yumi", id: 6, losses: 0 },
-    { name: "Stephen", id: 7, losses: 0 },
+    {
+      name: "Steve",
+      id: 1,
+      losses: 0,
+      wins: 0,
+      decks: [
+        { deckName: "Gotta Win", commander: "Yidris", wins: 0, losses: 0 },
+      ],
+    },
+    { name: "Alex", id: 2, losses: 0, wins: 0 },
+    { name: "Kevin", id: 3, losses: 0, wins: 0 },
+    { name: "Alphie", id: 4, losses: 0, wins: 0 },
+    { name: "Becca", id: 5, losses: 0, wins: 0 },
+    { name: "Yumi", id: 6, losses: 0, wins: 0 },
+    { name: "Stephen", id: 7, losses: 0, wins: 0 },
   ]);
   const [trueCount, setTrueCount] = useState(0);
 
@@ -36,13 +44,10 @@ export default function GameComponent(props) {
 
     for (let i = 0; i < players.length; i++) {
       const currentItem = players[i].lost;
-      console.log(players);
 
       if (currentItem === true) {
         updatedTrueCount = updatedTrueCount + 1;
         setTrueCount(updatedTrueCount);
-        console.log(players.length - 1);
-        console.log(trueCount);
         if (updatedTrueCount === players.length - 1) {
           for (let i = 0; i < players.length; i++) {
             if (players[i].lost === false) {
@@ -51,7 +56,17 @@ export default function GameComponent(props) {
                 ...updatedPlayer[i],
                 won: true,
               };
-              console.log(updatedPlayer);
+
+              const playersWins = players[i].wins + 1;
+              const player = players[i].id;
+              console.log(player);
+              const updatedPermanentPlayer = [...currentPlayers];
+              updatedPermanentPlayer[player] = {
+                ...updatedPermanentPlayer[player],
+                wins: playersWins,
+              };
+              setCurrentPlayers(updatedPermanentPlayer);
+              console.log(currentPlayers);
               setPlayers(updatedPlayer);
             }
           }
@@ -82,7 +97,11 @@ export default function GameComponent(props) {
   if (playersChosen == 0) {
     return (
       <div>
-        <PlayerList players={currentPlayers} onItemClick={handlePlayerClick} />
+        <PlayerList
+          players={currentPlayers}
+          onItemClick={handlePlayerClick}
+          count={props.countersNumber}
+        />
         <button onClick={() => setPlayersChosen(1)}>Submit Players</button>
       </div>
     );

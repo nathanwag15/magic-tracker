@@ -9,9 +9,13 @@ export default function Home() {
   const [count, setCount] = useState(0);
   const [display, setDisplay] = useState(0);
   const establishCounterCount = (number) => {
-    console.log(count);
-    setCount(number);
-    setDisplay(1);
+    if (number == 0) {
+      setDisplay(0);
+    } else {
+      console.log(count);
+      setCount(number);
+      setDisplay(1);
+    }
   };
   return (
     <div className="game-component-wrapper">
