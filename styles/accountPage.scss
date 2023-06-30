@@ -1,0 +1,27 @@
+.home-page-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.account-page-wrapper {
+  width: 1300px;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.account-page-username-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+
+  .name-wrapper {
+    font-size: 3.5rem;
+  }
+
+  .username-wrapper {
+    font-size: 1.5rem;
+  }
+}

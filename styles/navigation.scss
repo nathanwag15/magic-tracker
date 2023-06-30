@@ -1,0 +1,21 @@
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: row;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid white;
+}
+
+.navbar-contents-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+}
+
+.account-wrapper {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+}

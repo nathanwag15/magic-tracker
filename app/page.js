@@ -8,11 +8,13 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      Welcome to my Magic Stat tracker and point counter
-      <h1>
-        <a href="/games">Start a new game</a>
-      </h1>
+    <div className="home-page-wrapper">
+      <div className="account-page-wrapper">
+        <div className="account-page-username-wrapper">
+          <div className="name-wrapper">Your Name</div>
+          <div className="username-wrapper">Your Username</div>
+        </div>
+      </div>
     </div>
   );
 }
