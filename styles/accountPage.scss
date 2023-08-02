@@ -2,6 +2,8 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .account-page-wrapper {
@@ -24,4 +26,116 @@
   .username-wrapper {
     font-size: 1.5rem;
   }
+}
+
+.essential-stats-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 30px;
+}
+
+.stat-item {
+  padding: 10px 80px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.metas-and-decks-wrapper {
+  display: grid;
+  gap: 50px;
+  width: 1300px;
+}
+
+.metas-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: grey;
+  height: 500px;
+}
+
+.decks-wrapper {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+
+  .single-deck-wrapper {
+    background-color: white;
+    border-radius: 15px;
+    height: 230px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 30px;
+      width: 55%;
+      .deck-type-indicator {
+        background-color: white;
+        border-radius: 0px 0px 3px 3px;
+        margin-left: 20px;
+        color: black;
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(60, 64, 67, 0.4) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      }
+    }
+    .stats-wrapper {
+      height: 90%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .win-loss-circle-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .important-info-wrapper {
+        display: grid;
+        height: 90%;
+        width: 60%;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 20px;
+        .card-info-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          height: 90%;
+          width: 90%;
+          background-color: orange;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.metas-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  color: black;
+  border-bottom: 1px solid white;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.metas-content-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
 }
