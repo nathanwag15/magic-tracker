@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   padding-top: 60px;
+  background-color: black;
 }
 
 .account-page-username-wrapper {
@@ -61,13 +62,16 @@
   grid-gap: 30px;
 
   .single-deck-wrapper {
-    background-color: white;
+    background-color: black;
     border-radius: 15px;
     height: 230px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
     .title-wrapper {
       display: flex;
       align-items: center;
@@ -116,6 +120,7 @@
           width: 90%;
           background-color: orange;
           border-radius: 10px;
+          padding: 10px;
         }
       }
     }
@@ -138,4 +143,208 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
+}
+
+.single-deck-wrapper-two {
+  background-color: black;
+  border-radius: 15px;
+  height: 230px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  background-attachment: fixed;
+  background-position: 90%;
+  background-repeat: no-repeat;
+  background-size: 700px;
+  position: relative;
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    width: 55%;
+    .deck-type-indicator {
+      background-color: white;
+      border-radius: 0px 0px 3px 3px;
+      margin-left: 20px;
+      color: black;
+      width: 100px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(60, 64, 67, 0.4) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+  }
+  .stats-wrapper {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .win-loss-circle-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .important-info-wrapper {
+      display: grid;
+      height: 90%;
+      width: 60%;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding: 20px;
+      .card-info-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 90%;
+        width: 90%;
+        background-color: orange;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.single-deck-wrapper-three {
+  background-color: black;
+  border-radius: 15px;
+  height: 230px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  background-attachment: fixed;
+  background-position: 30% 100%;
+  background-repeat: no-repeat;
+  background-size: 800px;
+  position: relative;
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    width: 55%;
+    .deck-type-indicator {
+      background-color: white;
+      border-radius: 0px 0px 3px 3px;
+      margin-left: 20px;
+      color: black;
+      width: 100px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(60, 64, 67, 0.4) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+  }
+  .stats-wrapper {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .win-loss-circle-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .important-info-wrapper {
+      display: grid;
+      height: 90%;
+      width: 60%;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding: 20px;
+      .card-info-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 90%;
+        width: 90%;
+        background-color: orange;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.single-deck-wrapper-four {
+  background-color: black;
+  border-radius: 15px;
+  height: 230px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  background-attachment: fixed;
+  background-position: 120%;
+  background-repeat: no-repeat;
+  background-size: 700px;
+  position: relative;
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    width: 55%;
+    .deck-type-indicator {
+      background-color: white;
+      border-radius: 0px 0px 3px 3px;
+      margin-left: 20px;
+      color: black;
+      width: 100px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(60, 64, 67, 0.4) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+  }
+  .stats-wrapper {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .win-loss-circle-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .important-info-wrapper {
+      display: grid;
+      height: 90%;
+      width: 60%;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding: 20px;
+      .card-info-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 90%;
+        width: 90%;
+        background-color: orange;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    }
+  }
 }

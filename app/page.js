@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import PlayerPicker from "@/Components/playerPicker";
 import Link from "next/link";
 import AccountDeckDisplay from "../Components/accountDeckDisplay";
+import { useEffect } from "react";
 
 export default function Home() {
   return (
@@ -52,11 +53,86 @@ export default function Home() {
           </div>
         </div>
         <div className="decks-wrapper">
-          <AccountDeckDisplay deckType="Best Deck" />
-          <div className="single-deck-wrapper">Favorite Deck</div>
-          <div className="single-deck-wrapper">Worst Deck</div>
-          <div className="single-deck-wrapper">Nemesis</div>
+          <AccountDeckDisplay deckType="Best Deck" cardName={"najal"} />
+          <AccountDeckDisplay deckType="Fav Deck" cardName={"obeka"} />
+          <AccountDeckDisplay
+            deckType="Worst Deck"
+            cardName={"omnath+,+locus+of+rage"}
+          />
+          <AccountDeckDisplay deckType="Nemesis" cardName={"teshar+,+anc"} />
         </div>
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
+      </div>
+      <div>
+        ssssssssssssssss\n ssssssssssssss sssssssssssss ssssssssss ssssssssss
       </div>
     </div>
   );
