@@ -6,7 +6,7 @@ export default function accountDeckCard(props) {
   const [apiData, setApiData] = useState(null);
 
   useEffect(() => {
-    fetch(`https://api.scryfall.com/cards/named?fuzzy=${props.cardName}`)
+    fetch(`https://api.scryfall.com/cards/named?fuzzy=${props.name}`)
       .then((response) => response.json())
       .then((data) => setApiData(data.image_uris.art_crop))
       .catch((error) => console.error("Error fetching data:", error));

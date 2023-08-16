@@ -7,8 +7,21 @@ import PlayerPicker from "@/Components/playerPicker";
 import Link from "next/link";
 import AccountDeckDisplay from "../Components/accountDeckDisplay";
 import { useEffect } from "react";
+import axios from "axios";
 
-export default function Home() {
+export default async function Home() {
+  const [apiData, setApiData] = useState(null);
+
+  console.log(apiData);
+
+  const FetchData = async () => {
+    const response = await get("localhost5000/user/1");
+    const data = await response.json();
+
+    setApiData(data);
+    console.log(apiData);
+  };
+
   return (
     <div className="home-page-wrapper">
       <div className="account-page-wrapper">
@@ -53,7 +66,18 @@ export default function Home() {
           </div>
         </div>
         <div className="decks-wrapper">
-          <AccountDeckDisplay deckType="Best Deck" cardName={"najal"} />
+          {apiData && (
+            <AccountDeckDisplay
+              deckType="Best Deck"
+              cardName={"black+lotus"}
+              // deck={apiData.decks[0]}
+            />
+          )}
+          <AccountDeckDisplay
+            deckType="Best Deck"
+            cardName={"black+lotus"}
+            // deck={apiData.decks[0]}
+          />
           <AccountDeckDisplay deckType="Fav Deck" cardName={"obeka"} />
           <AccountDeckDisplay
             deckType="Worst Deck"
